@@ -4,9 +4,6 @@
 #include <time.h>
 #include <ctype.h>
 
-
-
-
 int is_in_array(char *array, char item)
 {
     int length_of_array = sizeof(array) / sizeof(array[0]);
@@ -20,7 +17,6 @@ int is_in_array(char *array, char item)
     }
     return 0;
 }
-
 
 void add_to_array(char *array, char item)
 {
@@ -89,7 +85,6 @@ void game(char *chosen_word)
             printf("You win!\n");
             break;
         }
-
     }
 }
 
@@ -125,15 +120,13 @@ int main()
     if (num_lines == -1)
     {
         printf("No Lines in File!\n");
-        exit(-1);
-        
+        exit(-1);       
     }
     // chooses a random line
     int chosen_line = rand() % num_lines;
     // char *chosen_word;
     if (file != NULL)
-    {
-        
+    { 
         int count = 0;
         char line[256];
         while (fgets(line, sizeof line, file) != NULL)
@@ -154,7 +147,6 @@ int main()
     {
         printf("file does not exist");
         return 0;
-    }
-    
+    } 
     return 0;
 }
